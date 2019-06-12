@@ -13,9 +13,12 @@ body {
 
 .post {
     margin: 0 auto;
-    max-width: 740px;
+    max-width: 735px;
     padding: 20px 0;
+    text-align: justify;
+    text-justify: inter-word;
 }
+
 .post h1 {
     font-family: monospace;
     font-size: 40px;
@@ -41,6 +44,7 @@ body {
     margin: 0 auto;
     padding: 0;
     float: left;
+    margin-top: 18px
 }
 
 .site-name {
@@ -57,7 +61,7 @@ nav {
     font-family: monospace;
     font-size: 25px;
     display: block;
-    margin-top: 30px;
+    margin-top: 33px;
     color: darkgrey;
 }
 
