@@ -70,6 +70,12 @@ h1 {
     color: rgba(5, 4, 104, 0.8);
 }
 
+h2 {
+    font-family: sans-serif;
+    color: rgba(5, 4, 104, 0.8);
+    font-style: oblique
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -77,6 +83,18 @@ a {
 a:hover, a:active {
     color: darkcyan;
 }
+
+p a {
+    color: blue
+}
+
+ul a {
+    color: blue
+}
+ul li {
+    padding: 3px 2px;
+}
+
 
 .clearfix:before,
 .clearfix:after {
