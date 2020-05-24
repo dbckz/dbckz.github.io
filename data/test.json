@@ -1,0 +1,151 @@
+{
+    "nodes": [
+        {
+            "name": "Male",
+            "id": "male_score"
+        },
+        {
+            "name": "Female",
+            "id": "female_score"
+        },
+        {
+            "name": "First",
+            "id": "first_score"
+        },
+        {
+            "name": "Two-One",
+            "id": "two_one_score"
+        },
+        {
+            "name": "Two-Two",
+            "id": "two_two_score"
+        },
+        {
+            "name": "Third",
+            "id": "third_score"
+        },
+        {
+            "name": "Unemployed",
+            "id": "unemployed_score"
+        },
+        {
+            "name": "£0-40k",
+            "id": "below_forty_score"
+        },
+        {
+            "name": "£40k+",
+            "id": "above_forty_score"
+        },
+        {
+            "name": "£40k+",
+            "id": "above_forty_score"
+        }
+    ],
+    "links": [
+        {
+            "source": 0,
+            "value": 0.15,
+            "target": 2
+        },
+        {
+            "source": 0,
+            "value": 0.16,
+            "target": 3
+        },
+        {
+            "source": 0,
+            "value": 0.17,
+            "target": 4
+        },
+        {
+            "source": 0,
+            "value": 0.18,
+            "target": 5
+        },
+        {
+            "source": 1,
+            "value": 0.15,
+            "target": 2
+        },
+        {
+            "source": 1,
+            "value": 0.16,
+            "target": 3
+        },
+        {
+            "source": 1,
+            "value": 0.17,
+            "target": 4
+        },
+        {
+            "source": 1,
+            "value": 0.18,
+            "target": 5
+        },
+        {
+            "source": 2,
+            "value": 0.17,
+            "target": 6
+        },
+        {
+            "source": 2,
+            "value": 0.18,
+            "target": 7
+        },
+        {
+            "source": 2,
+            "value": 0.15,
+            "target": 8
+        },
+        {
+            "source": 3,
+            "value": 0.16,
+            "target": 6
+        },
+        {
+            "source": 3,
+            "value": 0.17,
+            "target": 7
+        },
+        {
+            "source": 3,
+            "value": 0.18,
+            "target": 8
+        },
+        {
+            "source": 4,
+            "value": 0.17,
+            "target": 6
+        },
+        {
+            "source": 4,
+            "value": 0.18,
+            "target": 7
+        },
+        {
+            "source": 4,
+            "value": 0.15,
+            "target": 8
+        },
+        {
+            "source": 5,
+            "value": 0.16,
+            "target": 6
+        },
+        {
+            "source": 5,
+            "value": 0.17,
+            "target": 7
+        },
+        {
+            "source": 5,
+            "value": 0.18,
+            "target": 8
+        },
+        {
+            "source": 5,
+            "value": 0.18,
+            "target": 8
+        }
+    ]
+}

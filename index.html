@@ -2,31 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dave Buckley | home</title>
-    <link rel="shortcut icon" href="./favicon.ico">
-    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.12.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.12.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.8.0"></script>
+    <script src="https://d3js.org/d3-dsv.v1.min.js"></script>
+    <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
+    <script src="https://unpkg.com/d3@5/dist/d3.min.js"></script>
+    <script src="https://unpkg.com/d3-sankey@0.7/build/d3-sankey.min.js"></script>
+
+    <style media="screen">
+        /* Add space between Vega-Embed links  */
+        .vega-actions a {
+          margin-right: 5px;
+        }
+      </style>
 </head>
 <body>
-<header class="masthead clearfix">
-    <div class="container">
-        <a href="./index.html"><img class="site-avatar" src="./images/cave_in_georgia.jpg" alt="Dave in a Cave"/></a>
+    <h1>Data Visualization Project</h1>
+    <div id="vis"></div>
+    <br>
+    <div id="vis2"></div>
+    <br>
+    <div id="vis3"></div>
+    <br>
+    <div id="vis4"></div>
+    <br>
+    <div id="vis5"></div>
+    <br>
+    <div id="vis6"></div>
 
-        <div class="site-info">
-            <h1 class="site-name"><a href="./index.html">Dave Buckley</a></h1>
-        </div>
-
-        <nav>
-            <a href="./index.html">home</a>
-            <a href="./about.html">about</a>
-            <a href="./misc.html">misc</a>
-        </nav>
-    </div>
-</header>
-
-<div class="post">
-    <h1>An introduction...</h1>
-    <p>TODO 😊</p>
-</div>
-
+    <script src="js/uni-admissions-by-ethnicity.js"></script>
+    <script src="js/degree-classifications.js"></script>
+    <script src="js/wage-gap-vs-gdp-per-capita-orig.js"></script>
+    <script src="js/wage-gap-vs-gdp-per-capita.js"></script>
+    <script src="js/gender-wage-gap.js"></script>
+    <script src="js/gender-wage-gap-by-year.js"></script>
 </body>
 </html>
