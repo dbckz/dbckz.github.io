@@ -4,11 +4,12 @@ var vlSpec = {
 
     title: {
         text: "OECD Gender Pay Gap - Year by Year",
-        fontSize: 20,
+        fontSize: 25,
         fontWeight: "bold",
-        subtitle: "Hover over each gap for further details",
+        subtitle: "Move through time by using the scroll bar in the bottom left",
         subtitleFontStyle: "italic",
-        subtitleFontSize: 14
+        subtitleFontSize: 20,
+        dy: -25
     },
     width: 1600,
     height: 800,
@@ -33,8 +34,16 @@ var vlSpec = {
         },
         {
             "filter": {
-                "selection": "scroll"
+                "selection": "Select"
             }
+        },
+        {
+            calculate: "0.5 - datum['actual_gap']",
+            as: "lower_x"
+        },
+        {
+            calculate: "0.5 + (1 * datum['actual_gap'])",
+            as: "upper_x"
         }
     ],
     layer: [
@@ -42,17 +51,17 @@ var vlSpec = {
             "selection": {
                 "highlight": {"type": "single", "empty": "none", "on": "mouseover"},
                 "select": {"type": "multi"},
-                "scroll": {
+                "Select": {
                     "type": "single",
                     "fields": ["Year"],
                     "init": {
-                        "Year": 2016
+                        "Year": 2018
                     },
                     "bind": {
                         "input": "range",
                         "min": 1970,
                         "max": 2018,
-                        "step": 1
+                        "step": 1,
                     }
                 }
             },
@@ -141,14 +150,59 @@ var vlSpec = {
             }
         },
         {
+            "mark": "rule",
+            "encoding": {
+              "x": {
+                "aggregate": "mean",
+                "field": "lower_x",
+                "type": "quantitative",
+              },
+              "color": {"value": "red"},
+              "size": {"value": 5},
+            }
+        },
+        {
+            "mark": "rule",
+            "encoding": {
+              "x": {
+                "aggregate": "mean",
+                "field": "upper_x",
+                "type": "quantitative",
+              },
+              "color": {"value": "red"},
+              "size": {"value": 5},
+            }
+        },
+        {
             mark: {
                 type: "text",
                 align: "center",
                 baseline: "bottom",
-                fontSize: 16,
+                fontSize: 22,
+                font: "Monospace",
+                // fontStyle: "bold",
                 color: "red",
-                dy: -380,
-                dx: 300
+                dy: -420,
+                dx: -47
+            },
+            encoding: {
+                text: {
+                field: "test",
+                type: "nominal",
+                }
+            }
+        },
+        {
+            mark: {
+                type: "text",
+                align: "center",
+                baseline: "bottom",
+                fontSize: 22,
+                font: "Monospace",
+                fontStyle: "bold",
+                color: "red",
+                dy: -420,
+                dx: 107
             },
             encoding: {
                 text: {
@@ -167,8 +221,9 @@ var vlSpec = {
                 dx: 0,
                 // dy: -17,
                 color: "#70A280",
-                fontStyle: "bold",
-                fontSize: 14
+                // fontStyle: "bold",
+                fontSize: 16,
+                font: "Monospace"
             },
             encoding: {
                 text: {
@@ -178,7 +233,8 @@ var vlSpec = {
                     condition: {
                         test: "datum.position != 1",
                         value: ""
-                    }
+                    },
+                    
                 },
                 y: {
                     field: 'name',
